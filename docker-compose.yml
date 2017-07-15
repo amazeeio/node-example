@@ -3,7 +3,7 @@ services:
   node:
     hostname: &hostname node-example.docker.amazee.io
     container_name: *hostname
-    image: amazeeio/centos7-node-builder:6
+    image: amazeeio/centos7-node-builder:8
     volumes:
       - .:/app:delegated
     command: bash -c "yarn install && npm run dev"
@@ -14,3 +14,5 @@ services:
       - AMAZEEIO=AMAZEEIO
       - AMAZEEIO_URL=node-example.docker.amazee.io
       - AMAZEEIO_HTTP_PORT=3000
+      ## set AMAZEEIO_GIT_BRANCH to the branch name that you would like to inject environment variables for
+      #- AMAZEEIO_GIT_BRANCH=master
