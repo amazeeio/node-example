@@ -1,0 +1,4 @@
+services:
+  node:
+    type: node:8
+    Dockerfile: Dockerfile
