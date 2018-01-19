@@ -4,12 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "dotenv-extended": "^2.0.1",
-    "express": "^4.15.3",
-    "nodemon": "^1.11.0"
+    "express": "^4.15.3"
   },
   "scripts": {
-    "start": "node -r dotenv-extended/config index.js",
-    "dev": "nodemon --exec 'node -r dotenv-extended/config' -- index.js"
+    "start": "node index.js"
   }
 }

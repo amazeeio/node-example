@@ -1,6 +1,0 @@
-services:
-  node:
-    amazeeio:
-      type: node:8
-    build:
-      dockerfile: Dockerfile
