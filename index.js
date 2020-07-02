@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
     result.push(`${key}=${process.env[key]}`)
   })
   result.sort()
-
+  res.header('X-LAGOON' , process.env.HOSTNAME )
   res.send(result.join("<br />"))
 })
 
