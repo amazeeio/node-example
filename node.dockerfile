@@ -1,8 +1,8 @@
-FROM amazeeio/node:14-builder as builder
+FROM uselagoon/node-14-builder as builder
 COPY package.json yarn.lock /app/
 RUN yarn install
 
-FROM amazeeio/node:14
+FROM uselagoon/node-14
 COPY --from=builder /app/node_modules /app/node_modules
 COPY . /app/
 

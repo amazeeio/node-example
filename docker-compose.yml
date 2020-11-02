@@ -6,7 +6,7 @@ services:
       - default
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: node.dockerfile
     labels:
       lagoon.type: node
     volumes:
