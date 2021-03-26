@@ -1,4 +1,4 @@
-Docker Compose NodeJS14 example
+Docker Compose Node 14 simple
 =============================
 
 This is a docker-compose version of the Lando example tests:
@@ -25,13 +25,13 @@ Run the following commands to validate things are rolling as they should.
 
 ```bash
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=node-example | grep Up | grep node-example_node_1
+docker ps --filter label=com.docker.compose.project=node-example-simple | grep Up | grep node-example-simple_node_1
 
 # Should ssh against the node container by default
 docker-compose exec -T node sh -c "env" | grep LAGOON= | grep node
 
 # Should have the correct environment set
-docker-compose exec -T node sh -c "env" | grep LAGOON_ROUTE | grep node-example.docker.amazee.io
+docker-compose exec -T node sh -c "env" | grep LAGOON_ROUTE | grep node-example-simple.docker.amazee.io
 # docker-compose exec -T node sh -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
 # Should be running NodeJS 14
@@ -47,7 +47,7 @@ docker-compose exec -T node sh -c "node --version"
 docker-compose exec -T node sh -c "yarn --version"
 
 # Should have a running NodeJS site
-curl -kL http://node-example.docker.amazee.io | grep "COMPOSE_PROJECT_NAME=node-example"
+curl -kL http://node-example-simple.docker.amazee.io | grep "COMPOSE_PROJECT_NAME=node-example-simple"
 ```
 
 Destroy tests
