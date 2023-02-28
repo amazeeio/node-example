@@ -34,8 +34,8 @@ docker-compose exec -T node sh -c "env" | grep LAGOON= | grep node
 docker-compose exec -T node sh -c "env" | grep LAGOON_ROUTE | grep node-example-simple.docker.amazee.io
 # docker-compose exec -T node sh -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
-# Should be running NodeJS 14
-docker-compose exec -T node sh -c "node -v" | grep "v14"
+# Should be running NodeJS 18
+docker-compose exec -T node sh -c "node -v" | grep "v18"
 
 # Should have npm
 docker-compose exec -T node sh -c "npm --version"
