@@ -8,6 +8,8 @@ services:
       dockerfile: node.dockerfile
     labels:
       lagoon.type: node
+    ports:
+      - "3000" # exposes the port 3000 with a random local port, find it with `docker-compose port node 3000`
     volumes:
       - .:/app:delegated
     environment:
