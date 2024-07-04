@@ -1,4 +1,4 @@
-FROM uselagoon/node-18-builder:latest as builder
+FROM uselagoon/node-18-builder:latest AS builder
 COPY package.json yarn.lock /app/
 RUN yarn install
 
